@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Myeongjo:wght@400;700&family=Oswald:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+/* Common Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Jua', sans-serif;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.section-heading {
+    font-size: 12rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing:.5rem;
+    animation: Emphasis 10s infinite;
+}
+
+/* End of Common Styles */
+
+/* Section 1 */
+
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #2d2d2ebd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-1-icons i {
+    font-size: 25rem;
+    color: #cf9d73e0;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    text-shadow: .1rem .5rem .5rem #382727b4;
+    transition: transform .3s;
+}
+
+.section-1-icons i.change {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .3s .3s;
+}
+/* End Section 1 */
+
+/* Section 2 */
+
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #2d2d2ebd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 0;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 30rem;
+    padding: 4rem;
+    background-color: rgba(153, 136, 117, 0.933);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: .25rem .5rem 1.25rem #333333;
+    border: .125rem solid #333333;
+}
+
+.card::before {
+    content: "";
+    
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #424041;
+    text-transform: uppercase;
+    letter-spacing:.5rem;
+    margin: 2rem 0;
+    text-shadow: .15rem .15rem .15rem #69462fef;
+}
+
+.card-btn {
+    width: 70%;
+    background-color: #8a6751ef;
+    color: #461b18ef;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    border: none;
+    padding: .5rem 0;
+    cursor: pointer;
+    box-shadow: -.2rem -.2rem 2rem #81614cee;
+}
+
+/* End of Section 2 */
+
+/* Animation */
+
+@keyframes Emphasis {
+    0% {
+        color: #fcb89ec4;
+        text-shadow: .5rem .85rem .85rem #382727b4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    10% {
+        color: #f8a686c4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        text-shadow: .5rem 1rem .5rem #382727b4;
+    }
+
+    20% {
+        color: #fcb89ec4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        text-shadow: .5rem 1rem .5rem #382727b4;
+    }
+
+    30% {
+        color: #f8a686c4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        text-shadow: .5rem 1rem .5rem #382727b4;
+    }
+
+    40% {
+        color: #fcb89ec4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        text-shadow: .5rem 1rem .5rem #382727b4;
+    }
+
+    50% {
+        color: #f8a686c4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        text-shadow: .5rem 1rem .5rem #382727b4;
+    }
+
+    60% {
+        color: #fcb89ec4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        text-shadow: .5rem 1rem .5rem #382727b4;
+    }
+
+    70% {
+        color: #f8a686c4;
+        text-shadow: .5rem .85rem .85rem #382727b4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    80% {
+        color: #fcb89ec4;
+        text-shadow: .5rem .85rem .85rem #382727b4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    90% {
+        color: #f8a686c4;
+        text-shadow: .5rem .85rem .85rem #382727b4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    100% {
+        color: #fcb89ec4;
+        transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        text-shadow: .5rem 1rem .5rem #382727b4;
+    }
+}
+
+/* End Animation */
+
