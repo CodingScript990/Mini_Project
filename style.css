@@ -1,3 +1,4 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Myeongjo:wght@400;700&family=Oswald:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 /* Common Styles */
@@ -39,6 +40,8 @@ html {
     justify-content: space-evenly;
 }
 
+/* Section 1 icons */
+
 .section-1-icons i {
     font-size: 25rem;
     color: #cf9d73e0;
@@ -47,6 +50,8 @@ html {
     text-shadow: .1rem .5rem .5rem #382727b4;
     transition: transform .3s;
 }
+
+/* Section 1 i tag virtual class naming(JS) */
 
 .section-1-icons i.change {
     transform: translate(-50%, -50%) scale(1);
@@ -66,10 +71,14 @@ html {
     padding: 10rem 0;
 }
 
+/* Section 2 Container */
+
 .cards-container {
     display: flex;
     justify-content: space-evenly;
 }
+
+/* Section 2 card part */
 
 .card {
     width: 30rem;
@@ -79,18 +88,52 @@ html {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    box-shadow: .25rem .5rem 1.25rem #333333;
-    border: .125rem solid #333333;
+    box-shadow: .1rem .1rem 1.125rem #333333;
+    transition: all .65s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transform: rotateY(20deg) skewX(-2deg);
+    position: relative;
 }
 
 .card::before {
     content: "";
-    
+    height: 100%;
+    width: 1rem;
+    background-color: rgba(107, 93, 74, 0.933);
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: -1rem -0.75rem 1.25rem #2c2727;
 }
+
+.card::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: rgba(107, 93, 74, 0.933);
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: -0.25rem -0.75rem 1.25rem #2c2727;
+}
+
+.card:hover {
+    transform: rotateY(20deg) skewX(-2deg) translateY(-2.75rem);
+    transition: all .325s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    box-shadow: -1.5rem -1.5rem 1.25rem #2c2727;
+}
+
+/* Section 2 card img */
 
 .card-img {
     width: 100%;
+    height: 50%;
 }
+
+/* Section 2 card title */
 
 .card-title {
     font-size: 3rem;
@@ -102,9 +145,12 @@ html {
     text-shadow: .15rem .15rem .15rem #69462fef;
 }
 
+/* Section 2 card button */
+
 .card-btn {
-    width: 70%;
-    background-color: #8a6751ef;
+    width: 90%;
+    height: 4rem;
+    background-color: #8f5e40ef;
     color: #461b18ef;
     border-radius: 5rem;
     font-size: 1.5rem;
@@ -115,11 +161,19 @@ html {
     padding: .5rem 0;
     cursor: pointer;
     box-shadow: -.2rem -.2rem 2rem #81614cee;
+    transition: all .3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.card-btn:hover {
+    color: #f1eaeaef;
+    background-color: #69432aef;
+    transition: all .3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
 }
 
 /* End of Section 2 */
 
-/* Animation */
+/* Animation Area */
 
 @keyframes Emphasis {
     0% {
