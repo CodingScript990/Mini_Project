@@ -1,3 +1,13 @@
+// menu icon
+
+document.querySelector(".menu").addEventListener("click", () => {
+  document.querySelectorAll(".target").forEach((item) => {
+    item.classList.toggle("change");
+  });
+});
+
+// change icon
+
 const icons = document.querySelectorAll(".section-1-icons i");
 let i = 1;
 
