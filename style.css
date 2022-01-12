@@ -11,6 +11,7 @@
     outline: none;
     font-family: 'Jua', sans-serif;
     font-weight: 400;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -42,6 +43,12 @@ html {
     justify-content: center;
     align-items: center;
     box-shadow: .25rem .25rem .25rem #222225bd;
+    transition: top .4s;
+}
+
+.navbar.change {
+    top: 0;
+    transition: top .4s;
 }
 
 .navbar-link {
@@ -53,7 +60,37 @@ html {
     align-items: center;
     top: 3rem;
     left: 3rem;
-    transition: color .5s;
+    opacity: 0;
+    transition: color .3s, opacity .2s;
+}
+
+.change .navbar-link {
+    opacity: 1;
+}
+
+.change .navbar-link:nth-child(1) {
+    transition: opacity .4s .5s,
+    color .3s;
+}
+
+.change .navbar-link:nth-child(2) {
+    transition: opacity .4s .6s,
+    color .3s;
+}
+
+.change .navbar-link:nth-child(3) {
+    transition: opacity .4s .7s,
+    color .3s;
+}
+
+.change .navbar-link:nth-child(4) {
+    transition: opacity .4s .8s,
+    color .3s;
+}
+
+.change .navbar-link:nth-child(5) {
+    transition: opacity .4s .9s,
+    color .3s;
 }
 
 .navbar-link:hover {
@@ -84,11 +121,17 @@ html {
     box-shadow: .125rem .125rem .125rem #272323, 
     -.125rem -.125rem .125rem #272323;
     cursor: pointer;
-    transition: top .4s;
+    transition: top .4s .2s;
+    z-index: 11;
+}
+
+.menu:hover {
+    animation: DelayDown 3.25s infinite;
 }
 
 .menu.change {
     top: 15rem;
+    transition: top .4s;
 }
 
 .menu::before{
@@ -371,20 +414,15 @@ html {
     width: 100%;
     height: 30vh;
     background-color: #353131;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
     position: relative;
-    display: grid;
 }
 
 .section-4-text {
-    width: 100%;
-    height: 100%;
     text-transform: uppercase;
-    position: relative;
-    display: grid;
-    justify-content: center;
     text-align: center;
-    justify-items: center;
-    grid-template-rows: 6rem 2rem 10rem;
 }
 
 .section-4-heading {
@@ -399,9 +437,9 @@ html {
 }
 
 .signup-form {
-    height: 100%;
+    height: 50%;
     position: relative;
-    display: grid;
+    display: flex;
     align-items: center;
 }
 
@@ -441,8 +479,8 @@ html {
 
 .copyright {
     position: absolute;
-    bottom: 2rem;
-    font-size: 1.5rem;
+    bottom: 3rem;
+    font-size: 1.7rem;
     font-weight: 200;
     color: #ffffff;
     letter-spacing: .1rem;
@@ -531,5 +569,123 @@ html {
     } 
 }
 
+@keyframes DelayDown {
+    0% {
+        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    100% {
+        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        margin-top: 2rem;
+    }
+}
 /* End Animation */
 
+/* Responsive */
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 50%;
+    }
+
+    .section-2 {
+        height: auto;
+        padding: 10rem 0 12rem 0;
+    }
+
+    .cards-container {
+        margin-top: 10rem;
+    }
+
+    .gallery-link {
+        width: 40rem;
+        height: 25rem;
+        margin: 5rem;
+    }
+
+    .food-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section-heading {
+        font-size: 9rem;
+        margin: 0 5rem;
+    }
+
+    .section-1-icons {
+        font-size: 25rem;
+    }
+
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 5rem;
+    }
+
+    .section-4 {
+        height: 30rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar-link {
+        margin: 2rem;
+    }
+
+    .navbar-link i {
+        font-size: 4rem;
+    }
+
+    .navbar-link span {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .section-heading {
+        font-size: 7rem;
+        margin: 0 10rem;
+    }
+
+    .section-1-icons i {
+        font-size: 20rem;
+    }
+
+    .menu {
+        left: 2rem;
+    }
+
+    .section-4 {
+        height: 40rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .section-4-text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        line-height: 6rem;
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 40%;
+    }
+
+    .navbar-link {
+        margin:  0 .7rem;
+    }
+}
+
+/* End of Responsive */

@@ -12,24 +12,20 @@
 
     <!-- Navbar -->
 
-    <nav class="navbar">
-        <a href="#" class="navbar-link">
+    <nav class="navbar target">
+        <a href="#home" class="navbar-link" id="js-home">
             <i class="fas fa-home"></i>
             <span>Home</span>
         </a>
-        <a href="#" class="navbar-link">
+        <a href="#meals" class="navbar-link" id="js-meals">
             <i class="fas fa-utensils"></i>
             <span>Meals</span>
         </a>
-        <a href="#" class="navbar-link">
-            <i class="fas fa-hamburger"></i>
-            <span>Burger</span>
+        <a href="#gallery" class="navbar-link" id="js-gallery">
+            <i class="fas fa-photo-video"></i>
+            <span>Gallery</span>
         </a>
-        <a href="#" class="navbar-link">
-            <i class="fas fa-pizza-slice"></i>
-            <span>Pizza</span>
-        </a>
-        <a href="#" class="navbar-link">
+        <a href="#contact" class="navbar-link" id="js-contact">
             <i class="fas fa-blender-phone"></i>
             <span>Contact</span>
         </a>
@@ -41,9 +37,9 @@
     <div class="container">
         <!-- Section 1 -->
         <section class="section-1">
-            <h1 class="section-heading">
+            <a name="home"><h1 class="section-heading">
                 Variety of Foods
-            </h1>
+            </h1></a>
             <div class="section-1-icons">
                 <i class="fas fa-egg change"></i>
                 <i class="fas fa-stroopwafel"></i>
@@ -62,7 +58,7 @@
         <!-- Section 2 -->
 
         <section class="section-2">
-            <h1 class="section-heading">Popular meals</h1>
+            <a name="meals"><h1 class="section-heading">Popular meals</h1></a>
             <div class="cards-container">
                 <div class="card">
                     <img src="image/fish.png" class="card-img">
@@ -87,7 +83,7 @@
         <!-- Section 3 -->
 
         <section class="section-3">
-            <h1 class="section-heading">Gallery</h1>
+            <a name="gallery"><h1 class="section-heading">Gallery</h1></a>
             <div class="gallery">
                 <a href="#" class="gallery-link" title="Order Now">
                     <img src="image/burger.png" class="food-img">
@@ -140,18 +136,18 @@
 
         <section class="section-4">
             <div class="section-4-text">
-                <h2 class="section-4-heading">Sign Me Up</h2>
+                <a name="contact"><h2 class="section-4-heading">Sign Me Up</h2></a>
                 <p class="section-4-paragraph">Be the first to know about new products</p>
-                <form class="signup-form">
-                    <input type="email" class="signup-form-input" placeholder="Enter Your Email">
-                    <button type="submit" class="signup-form-btn">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </form>
-                <p class="copyright">
-                    CodeAndCreate &copy; All Rights Reserved
-                </p>
             </div>
+            <form class="signup-form">
+                <input type="email" class="signup-form-input" placeholder="Enter Your Email">
+                <button type="submit" class="signup-form-btn">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            <p class="copyright">
+                CodeAndCreate &copy; All Rights Reserved
+            </p>
         </section>
 
         <!-- End of Section 4 -->
